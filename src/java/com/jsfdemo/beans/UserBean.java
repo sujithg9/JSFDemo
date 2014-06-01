@@ -16,7 +16,7 @@ import javax.faces.bean.SessionScoped;
 @ManagedBean(name = "user")
 @SessionScoped
 public class UserBean {
-    private String name;
+    private String name="";
 
     public String getName() {
         return name;
@@ -24,6 +24,10 @@ public class UserBean {
 
     public void setName(String name) {
         this.name = name;
+    }
+    
+    public String getWelcomeMessage(){
+        return "Hello Mr."+name;
     }
     
 }
