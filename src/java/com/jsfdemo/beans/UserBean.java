@@ -16,7 +16,7 @@ import javax.faces.bean.SessionScoped;
 @ManagedBean(name = "user")
 @SessionScoped
 public class UserBean {
-    private String name="";
+    private String name;
 
     public String getName() {
         return name;
@@ -29,5 +29,8 @@ public class UserBean {
     public String getWelcomeMessage(){
         return "Hello Mr."+name;
     }
-    
+     @Override
+     public String toString(){
+        return name;
+    }
 }

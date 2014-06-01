@@ -10,10 +10,11 @@
         <h:form>
             <center>
             <h1>Welcome JSF</h1><br/><br/>
-            ENTER USER NAME : <h:inputText id="name" value="#{user.name}" required="true">
+            ENTER USER NAME : <h:inputText id="name" value="#{registration.userName}" required="true">
                 <f:ajax event="keydown" execute="name" render="display" />
             </h:inputText>
-            
+            <h:commandButton value="Add" action="#{registration.addUsers()}"/>
+            <h:commandButton value="UsersList" action="listOfUsers" />
             <h:commandLink action="hello"><h1><h:outputLabel id="display" value="#{user.welcomeMessage}"/></h1></h:commandLink>
             </center>
         </h:form>
