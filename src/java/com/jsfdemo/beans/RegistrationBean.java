@@ -42,6 +42,10 @@ public class RegistrationBean{
         this.userName = userName;
     }
     
+     public String getWelcomeMessage(){
+        return "Hello Mr."+userName;
+    }
+    
     public String addUsers(){
         users.add(userName);
        return "listOfUsers";
