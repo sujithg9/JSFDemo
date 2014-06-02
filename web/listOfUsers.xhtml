@@ -18,8 +18,10 @@ and open the template in the editor.
         <h:outputLabel value="#{registration.users}" /><br/><br/>
    <div>
    <p:panel>
-       <p:barChart id="basic" value="#{chartViewBean.categoryModel}" legendPosition="ne" 
-           title="FormularioUsuario" min="0" max="700" style="height:900px"/>
+    <h:panelGrid columns="2" columnClasses="left,right" style="width:100%">
+        <p:chart type="line" model="#{chartViewBean.animatedModel1}" style="width:400px;" />
+    <p:chart type="bar" model="#{chartViewBean.animatedModel2}" style="width:400px;" />
+    </h:panelGrid>
    </p:panel>
    </div>  
      </h:body>
